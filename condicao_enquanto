@@ -1,0 +1,13 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro i = 3
+		
+		enquanto (i <= 50) {
+			escreva("Número: ", i, "\n")
+			i = i + 3
+		}
+	}
+}
