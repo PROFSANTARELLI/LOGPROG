@@ -30,6 +30,7 @@ def caixa_eletronico():
         elif opcao == "3":
             print("\nObrigado por usar o caixa eletrônico!")
             break  # Sai do loop
+caixa_eletronico()
 
         else:
             print("\nOpção inválida! Tente novamente.")
