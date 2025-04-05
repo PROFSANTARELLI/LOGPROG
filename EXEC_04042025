@@ -1,0 +1,95 @@
+programa
+{
+    funcao inicio()
+    {
+        cadeia texto
+
+        escreva("Digite um texto qualquer: ")
+        leia(texto)
+
+        escreva("Você digitou: ", texto)
+    }
+}
+
+
+
+programa
+{
+    funcao inicio()
+    {
+        real nota1, nota2, media
+
+        escreva("Digite a primeira nota: ")
+        leia(nota1)
+
+        escreva("Digite a segunda nota: ")
+        leia(nota2)
+
+        media = (nota1 + nota2) / 2
+
+        se (media >= 5)
+        {
+            escreva("Aprovado com média: ", media)
+        }
+        senao
+        {
+            escreva("Reprovado com média: ", media)
+        }
+    }
+}
+
+
+programa
+{
+    funcao inicio()
+    {
+        inteiro numero
+
+        escreva("Digite o número inicial da contagem: ")
+        leia(numero)
+
+        enquanto (numero >= 0)
+        {
+            escreva(numero, "\n")
+            numero = numero - 1
+        }
+    }
+}
+
+
+
+numero = int(input("Digite um número: "))
+
+if numero % 2 == 0:
+    print("O número é par.")
+else:
+    print("O número é ímpar.")
+
+
+
+
+
+nota1 = float(input("Digite a primeira nota: "))
+nota2 = float(input("Digite a segunda nota: "))
+
+media = (nota1 + nota2) / 2
+
+if media >= 6:
+    print(f"Aprovado com média: {media}")
+else:
+    print(f"Reprovado com média: {media}")
+
+
+
+
+
+numero = int(input("Digite o número inicial da contagem: "))
+
+while numero >= 0:
+    print(numero)
+    numero -= 1
+
+
+
+
+
