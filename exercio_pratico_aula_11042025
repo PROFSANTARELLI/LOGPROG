@@ -1,0 +1,65 @@
+# Conecta ou cria o banco 
+
+import sqlite3 
+
+ 
+
+# Cria a tabela, se não existir 
+
+conn = sqlite3.connect("cadastro_alunos.db") 
+
+cursor = conn.cursor() 
+
+ 
+
+cursor.execute(""" 
+
+CREATE TABLE IF NOT EXISTS alunos ( 
+
+    id INTEGER PRIMARY KEY AUTOINCREMENT, 
+
+    nome TEXT, 
+
+    idade INTEGER, 
+
+    curso TEXT 
+
+) 
+
+""") 
+
+ 
+
+# Coleta os dados do aluno 
+
+nome = input("Digite o nome do aluno: ") 
+
+idade = int(input("Digite a idade do aluno: ")) 
+
+curso = input("Digite o curso do aluno: ") 
+
+ 
+
+# Insere os dados na tabela 
+
+cursor.execute("INSERT INTO alunos (nome, idade, curso) VALUES (?, ?, ?)", (nome, idade, curso)) 
+
+conn.commit() 
+
+ 
+
+# Lista os alunos cadastrados 
+
+print("\nLista de alunos cadastrados:") 
+
+cursor.execute("SELECT * FROM alunos") 
+
+for aluno in cursor.fetchall(): 
+
+    print(f"ID: {aluno[0]} | Nome: {aluno[1]} | Idade: {aluno[2]} | Curso: {aluno[3]}") 
+
+ 
+
+# Fecha a tabela 
+
+conn.close() 
