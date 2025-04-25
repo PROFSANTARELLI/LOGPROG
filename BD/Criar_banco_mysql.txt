@@ -1,0 +1,28 @@
+Criando o banco via MySQL Workbench
+
+1 - Abra o MySQL Workbench
+2 - Conecte ao seu servidor MySQL
+3 - Vá até o menu "Schemas" (banco de dados) > clique com botão direito > Create Schema
+4 - Digite o nome: escola
+5 - Clique em Apply > Apply > Finish
+
+  
+Criando a tabela alunos VIA MySQL Workbench
+
+USE escola;
+
+CREATE TABLE alunos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    idade INT,
+    curso VARCHAR(100)
+);
+
+
+TESTAR
+INSERT INTO alunos (nome, idade, curso)
+VALUES ('Maria', 22, 'Engenharia');
+
+
+CONSULTAR
+SELECT * FROM alunos;
